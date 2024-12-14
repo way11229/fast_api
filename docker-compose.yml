@@ -1,0 +1,9 @@
+services:
+  fast_api:
+    build: .
+    container_name: fast_api
+    ports:
+      - 80:80 # for http
+    volumes:
+      - ./user_files:/user_files
+    restart: unless-stopped
